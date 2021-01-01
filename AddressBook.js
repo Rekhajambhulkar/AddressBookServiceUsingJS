@@ -119,3 +119,10 @@ try {
 } catch (e) {
     console.error(e);
 }
+
+//UC3
+let addressBookArray = new Array();
+addressBookArray.push(addressBook1);
+addressBookArray.push(addressBook2);
+addressBookArray.push(addressBook3);
+console.log(addressBookArray);
