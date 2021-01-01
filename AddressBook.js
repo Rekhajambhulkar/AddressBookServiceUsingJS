@@ -126,3 +126,25 @@ addressBookArray.push(addressBook1);
 addressBookArray.push(addressBook2);
 addressBookArray.push(addressBook3);
 console.log(addressBookArray);
+
+//UC4
+function UpdateRecords(firstName){
+    for(let i = 0; i< addressBookArray.length; i++){
+        if(addressBookArray[i].firstName == firstName){
+            return i;
+        }
+    }
+    return -1;
+}
+
+let arrayIndex = UpdateRecords('Riya');
+if(arrayIndex != -1){
+    console.log("\nContacts before updation\n");
+    console.log(addressBookArray.toString());
+    addressBookArray[arrayIndex].firstName = 'Payal';
+    addressBookArray[arrayIndex].city = 'pune';
+    console.log("\ncontacts after updation");
+    console.log(addressBookArray.toString());
+}else{
+    addressBookArray.log("contacts not found")
+}
