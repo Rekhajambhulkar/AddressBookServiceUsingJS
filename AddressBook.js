@@ -247,3 +247,14 @@ function countEntries(){
     console.log("Count number of contacts is:" + count);
     }
     countEntries();
+
+    //UC7 - Ability to ensure there is no duplicate Entry in Address Book
+function duplicateEntries(){
+    let uInput = prompt("Enter name you want to search for duplicate entry:")
+    if(addressBookArray.some(s => s.firstName == uInput)){
+        console.log("Contacts already exists");
+    }else{
+            console.log("Contacts not exists");
+        }
+} 
+duplicateEntries(); 
