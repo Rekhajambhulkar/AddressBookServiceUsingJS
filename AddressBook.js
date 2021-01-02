@@ -248,7 +248,7 @@ function countEntries(){
     }
     countEntries();
 
-    //UC7 - Ability to ensure there is no duplicate Entry in Address Book
+//UC7 - Ability to ensure there is no duplicate Entry in Address Book
 function duplicateEntries(){
     let uInput = prompt("Enter name you want to search for duplicate entry:")
     if(addressBookArray.some(s => s.firstName == uInput)){
@@ -258,3 +258,32 @@ function duplicateEntries(){
         }
 } 
 duplicateEntries(); 
+
+// UC8 - Ability to Search Contact in City
+function searchByCityOrState(){
+    let searchByCity = prompt("Enter City to search:");
+    let SearchByState = prompt("Enter State to Serach:");
+    addressBookArray.forEach(addressBook => {
+    if(addressBook.city == searchByCity && addressBook.state == SearchByState){
+        console.log("Perosn City and State:" + searchByCity + "and" + SearchByState);
+    }
+    });
+    addressBookArray.filter(addressBook => addressBook.city == searchByCity)
+    addressBookArray.filter(addressBook => addressBook.state == SearchByState)
+    addressBookArray.forEach(addressBook => console.log(addressBookArray))
+}
+searchByCityOrState();
+
+// UC9 - Ability to View Contact in City or state
+function viewByCityOrState(){
+    let searchByCity = prompt("Enter City to search:");
+    let SearchByState = prompt("Enter State to Serach:");
+    addressBookArray.forEach(addressBook => {
+    if(addressBookArray.some(addressBook => addressBook.city == searchByCity && addressBook.state == SearchByState)){
+        console.log("Perosn City and State:" + searchByCity + "and" + SearchByState);
+    }
+    });
+    addressBookArray.filter(addressBook => addressBook.city == searchByCity && addressBook.state == SearchByState)
+    addressBookArray.forEach(addressBook => console.log(addressBookArray))
+    }
+    searchByCityOrState();
