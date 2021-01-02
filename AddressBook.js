@@ -288,7 +288,7 @@ function viewByCityOrState(){
     }
     searchByCityOrState();
 
-    //UC10
+    //UC10 - Count contacts by city or state
     function countByCity(city) {
         return addressBookArray.filter(contact => contact.city == city).reduce((count, contact) => count += 1, 0);
     }
@@ -297,3 +297,11 @@ function viewByCityOrState(){
     }
     console.log("number of Person in city " +countByCity("Pune"));
     console.log("number of Person in state " +countByState("Maharashtra"));
+
+    //UC11 - Sort By Name
+    function sortByname(){
+        addressBookArray.sort((a, b) => a.firstName.toLowerCase().localeCompare(b.firstName.toLowerCase()));
+        console.log("sorted Array:")
+        addressBookArray.forEach(AddressBook => console.log("Sort By Name:\n"+AddressBook.toString()))
+    }
+    sortByname();
