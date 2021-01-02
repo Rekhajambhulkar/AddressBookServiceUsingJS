@@ -225,3 +225,18 @@ function updateRecords(){
     }
 }
 updateRecords();
+console.log(addressBookArray)
+
+//UC5 - Ability to Search & Delete existing Contact
+function deleteContact(){
+    let uInput = prompt("Which Entry you want to delete:")
+        addressBookArray.forEach(addressBook => {
+          if(addressBook.firstName == uInput){
+              console.log("\ncontact found");
+            addressBookArray.splice(addressBookArray.indexOf(addressBookArray), 1);
+            console.log("\ncontact Delete successefully \n" + addressBookArray);
+          }
+        });
+    }
+    deleteContact();
+    console.log(addressBookArray)
