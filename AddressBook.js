@@ -239,4 +239,11 @@ function deleteContact(){
         });
     }
     deleteContact();
-    console.log(addressBookArray)
+    
+//UC6 - Ability to find number of Contacts in Address Book
+function countEntries(){
+    console.log("\nCounting number of persons in addressBook");
+    let count = addressBookArray.reduce(((count) => { count +=1; return count; }), 0);
+    console.log("Count number of contacts is:" + count);
+    }
+    countEntries();
