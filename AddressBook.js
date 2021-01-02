@@ -305,3 +305,24 @@ function viewByCityOrState(){
         addressBookArray.forEach(AddressBook => console.log("Sort By Name:\n"+AddressBook.toString()))
     }
     sortByname();
+
+    //UC12 - Sort By City 
+    function sortByCity(){
+        addressBookArray.sort((a, b) => a.city.toLowerCase().localeCompare(b.city.toLowerCase()));
+        console.log("sorted Array:")
+        addressBookArray.forEach(AddressBook => console.log("Sort By City:\n"+AddressBook.toString()));
+    }
+    sortByCity();
+
+    //Sort By State
+    function sortByState(){
+        addressBookArray.sort((a, b) => a.state.toLowerCase().localeCompare(b.state.toLowerCase()));
+        console.log("sorted Array:")
+        addressBookArray.forEach(AddressBook => console.log("Sort By State:\n"+AddressBook.toString()));
+    }
+    sortByState();
+
+
+
+
+
